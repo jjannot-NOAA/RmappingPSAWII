@@ -1,5 +1,5 @@
 ---
-title: "PSAW II: Mapping and Spatial Analysis in R!"
+title: "Mapping and Spatial Analysis in R!"
 subtitle: "Part 1-Overview"
 author: "Kevin Stierhoff <br /> <br /> NOAA Fisheries <br /> Southwest Fisheries Science Center"
 date: '`r format(Sys.time(), format = "%F")`'
@@ -19,7 +19,9 @@ output:
 if (!require("pacman")) install.packages("pacman")
 
 # Install and load required packages from CRAN ----
-pacman::p_load(xaringan,knitr,here,emo)
+pacman::p_load(xaringan,knitr,here)
+
+pacman::p_load_gh("hadley/emo")
 
 knitr::opts_chunk$set(echo = F)
 ```
@@ -181,7 +183,16 @@ https://r-spatial.github.io/sf/
 --
 
 ### Social media (seriously)
-+ \#rstats/\#rspatial **Twitter**: @hadleywickham, @edzerpebesma, @mdsumner, @ClausWilke, @robinlovlace, and many, many others
++ Twitter
+  + \#rstats and \#rspatial
+  
+  + @hadleywickham, @edzerpebesma, @mdsumner, @ClausWilke, @robinlovlace, and many, many others
+
+---
+
+background-image: url(images/tweet.png)
+background-size: 800px
+background-position: 50% 50%
 
 ---
 class: center, middle
@@ -210,7 +221,7 @@ background-image: url(images/example-leaflet.png)
 background-size: 700px
 background-position: 50% 70% 
 
-An interactive map Acoustic Trawl Survey data using **[`Leaflet`](https://swfscdata.nmfs.noaa.gov/AST/ATMap/interactive_explorer.HTML)** 
+An **[interactive map](https://swfscdata.nmfs.noaa.gov/AST/ATMap/interactive_explorer.HTML)** of Acoustic Trawl Survey data using `Leaflet` 
 
 ---
 ## Onward, let's make some maps!
